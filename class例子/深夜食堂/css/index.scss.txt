@@ -1,0 +1,220 @@
+﻿/*.box{
+  width: 300px;
+  margin: 300px auto;
+  height: 500px;
+  position: relative;
+}
+.transform{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  animation:translate 5s cubic-bezier(.53,.97,.85,1) infinite alternate ;
+  transform-style:preserve-3d ;
+  transform-origin: center center;
+  transform: rotateY(30deg);
+  opacity: 0;
+}
+.rotate{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  opacity: 0.5;
+  border-radius:50%;
+  animation:gold 0.2s cubic-bezier(.03,.04,.03,.99) infinite ;
+  transform: perspective(800px) ;
+  transform-style:preserve-3d;
+  transform-origin: center center;
+}
+@keyframes translate {
+  0%{
+    transform: perspective(800px) translateY(0) rotateY(30deg);
+    opacity: 0;
+  }
+  50%{
+
+    transform: perspective(800px) translateY(-300px) rotateY(30deg);
+    opacity: 1;
+  }
+  100%{
+    transform: perspective(800px) translateY(0) rotateY(30deg);
+    opacity: 0;
+  }
+}
+@keyframes gold {
+  0%{
+    transform: perspective(800px) rotateX(0deg) ;
+  }
+  100%{
+    transform: perspective(800px) rotateX(360deg)  ;
+  }
+}*/
+
+$bg_cen:top center no-repeat;
+$colorz:#894f05;
+$colorh:#bd7923;
+.cen{
+  width: 1100px;
+  margin: auto;
+}
+.er_scene{
+  background: url(../images/bg_01.jpg) $bg_cen;
+  height: 881px;
+  overflow: hidden;
+  .cen{
+
+  }
+  .scene{
+    position: relative;
+    width: 100%;
+    .xjk{
+      position: absolute;
+      left: 0;
+      //准备到的位置
+      //top: 230px;
+      top:252px;
+      width: 315px;
+      height: 315px;
+      .img_box{
+        width: 153px;
+        height: 157px;
+        margin: auto;
+        position: relative;
+        span{
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+      p{
+        padding-top: 10px;
+        font-size: 22px;
+        line-height: 24px;
+        color: $colorh;
+      }
+      h3{
+        color: $colorz;
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: bold;
+        padding-top: 4px;
+      }
+      p,h3{
+        text-align: center;
+      }
+      .active{
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tit2{
+  padding-top: 123px;
+ .tit_cen{
+   width: 775px;
+   margin: auto;
+   text-align: center;
+   font-size: 46px;
+   line-height: 82px;
+   color: $colorz;
+   position: relative;
+   background: url(../images/list.png) $bg_cen;
+   height: 110px;
+   font-weight: bold;
+   .rule_poppu{
+     position: absolute;
+     right: -136px;
+     bottom: 22px;
+     font-size: 18px;
+     p{
+       text-align: center;
+       width: 194px;
+       height: 33px;
+       line-height: 33px;
+       color: #fee2ab;
+       background:#be7b22;
+       border-radius: 15px;
+       font-size: 18px;
+       cursor: pointer;
+     }
+     .pop_div{
+       position: absolute;
+       right: 0;
+       top: 33px;
+       z-index: 2;
+       width: 557px;
+       height: 207px;
+       background: url(../images/list_bg.png) $bg_cen;
+display: none;
+       .close{
+         position: absolute;
+         right: 10px;
+         top: 10px;
+         width: 30px;
+         height: 30px;
+         overflow: hidden;
+         cursor: pointer;
+         line-height: 30px;
+         display: block;
+       }
+       .w265{
+         width: 265px;
+         height: 127px;
+         background: #fee2ab;
+         float: left;
+         border-radius: 30px;
+         margin-top: 49px;
+         margin-left: 20px;
+       }
+       .w245{
+         width: 245px;
+         height: 127px;
+         background: #fee2ab;
+         float: left;
+         border-radius: 30px;
+         margin-top: 49px;
+         margin-left: 10px;
+         ul{
+           padding-top: 35px;
+         }
+       }
+       ul{
+         box-sizing: border-box;
+         padding: 25px 0 19px 10px;
+         font-weight: normal;
+         li{
+           font-size: 14px;
+           color: $colorz;
+           line-height: 19px;
+           text-align: left;
+           span{
+             width: 8px;
+             height: 8px;
+             background: url(../images/yuan.png) $bg_cen;
+             display: inline-block;
+             margin-top: 3px;
+             margin-right: 3px;
+           }
+         }
+       }
+     }
+
+   }
+ }
+
+}
+
+
+
