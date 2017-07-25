@@ -1,13 +1,13 @@
 es6学习
 
-###定义类
-####class
-###构造方法
-####constructor()
-###新建父类的this对象
-####super()
-###静态函数
-####static
+### 定义类
+#### class
+### 构造方法
+#### constructor()
+### 新建父类的this对象
+#### super()
+### 静态函数
+#### static
 
 class fullPage(){
   constructor{
