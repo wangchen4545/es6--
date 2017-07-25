@@ -8,7 +8,7 @@ es6学习
 #### super()
 ### 静态函数
 #### static
-
+```
 class fullPage(){
   constructor{
     this.x=1;
@@ -22,10 +22,12 @@ class init extends fullPage(){
   }
   const add=()=>{
     //子类的方法
-    return this.x+this.y * fn
+    return this.x+this.y * fn()
   }
   //静态函数
   static fn(){
     return 3
   }
 }
+
+```
