@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>数据结构set</title>
+    <script type="text/javascript">
+        const a=new Set([1,2,3]);
+        const b=new Set([1,4,5]);
+        a.add("4").add("5")
+        console.log(a.delete("4"))
+        //console.log(a.clear("4"))
+        console.log(a.keys())
+
+        console.log(a.values())
+
+        console.log()
+
+        console.log(a.entries())
+
+        a.forEach(function(value,key,set){
+
+            console.log(value,key,set)
+
+        })
+          // 其实不明白看晚上这么做的，不明白的点是es6{..a},{fliter}{x}
+          // 交集
+        let intersect = new Set([...a].filter(x => b.has(x)));
+        console.log(intersect)
+
+        //let difference = new Set([...a].filter(x => !b.has(x)));
+        console.log(intersect);
+        let c=[1,2,4,5,6]
+        function arrfn(a,b,c,d,e){
+          console.log(a,b,c,d,e)
+        }
+        arrfn(...c);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
