@@ -41,3 +41,14 @@ class init extends fullPage(){
 #### entries 返回键值对的遍历器
 #### forEach 接受三个参数 value key set，其实set就是本身
 #### 详见set数据结构文件夹
+
+### map数据结构
+#### add("1").add("2")可以链式添加
+#### delete 删除数据
+#### clear 清除数据
+#### has 检测是存在，返回布尔值
+#### keys 返回键名的遍历器
+#### value 返回键值的遍历器
+#### entries 返回键值对的遍历器
+#### forEach 接受三个参数 value key map，其实map就是本身
+#### 详见map数据结构文件夹
