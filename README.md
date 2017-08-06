@@ -52,3 +52,46 @@ class init extends fullPage(){
 #### entries 返回键值对的遍历器
 #### forEach 接受三个参数 value key map，其实map就是本身
 #### 详见map数据结构文件夹
+
+### iterator接口
+#### Symbol.iterator接口
+```
+const arr=[1,2,3];
+console.log(arr[Symbol.iterator]);
+console.log(arr[Symbol.iterator].next);
+
+```
+#### 同理 new Set() \ new Map() 都可以使用 Symbol.iterator接口
+
+### 使用展开运算符去重
+```
+const arr=[0,0,2,,1,3,3];
+
+//先去使用new Set()去重
+//在使用展开运算符 ...
+console.log([...new Set(arr)]);
+
+```
+### for of 循环
+```
+const arr=[0,0,0,0,0];
+
+for(let i of ){
+  console.log(i)
+}
+
+const map=new Map([["a",1]]);
+map.set("b",2);
+
+for(let [key,val] of map){
+
+  console.log(key,val);
+
+}
+for(let i of map){
+  
+  console.log(i);
+
+}
+
+```

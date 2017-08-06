@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iterator for of</title>
+    <script type="text/javascript">
+    // 手写iterator
+      // var arr=[1,2,3];
+      //
+      // function iterator(arr){
+      //   let i=0;
+      //   return {
+      //     next:function(){
+      //       return i<arr.length?{value:arr[i++],done:false}:
+      //             {value:undefined,done:true}
+      //     }
+      //   }
+      // }
+      // var it=iterator(arr);
+      //
+      // console.log(it.next());
+      // console.log(it.next());
+      // console.log(it.next());
+      // console.log(it.next());
+// -----------------------------------------------------------------------
+
+      var arr=[1,2],
+          set=new Set(["a","b","c"]),
+          map=new Map([["a",1],["b",2],["b",2]]);
+          //不可以这么调用
+          //console.log(arr.next())
+          // 应该是调用了Symbol.iterator的函数再调用函数里面的方法next()
+          // 方法详见手写iterator
+          // 三种数据结构可以使用 iterator的next方法
+
+// -----------------------------------------------------------------------
+
+          console.log(arr[Symbol.iterator]().next())
+          console.log(set[Symbol.iterator]().next())
+          console.log(map[Symbol.iterator])
+// -----------------------------------------------------------------------
+
+          // 而对象是没有iterator是没有这个方法接口的
+          var obj ={}
+          console.log(obj[Symbol.iterator]);
+// -----------------------------------------------------------------------
+          // 展开运算符
+          const str="wangchen";
+          console.log([...str]);
+
+// -----------------------------------------------------------------------
+//        测试去重
+          var arr2=[0,0,0,0,0,0,0,1,2,3,4];
+          // 上下对比一下
+          // 先使用new Set去重,在使用展开运算符展开
+          console.log(new Set(arr2));
+          // 学习地址：http://blog.csdn.net/chauncywu/article/details/73060918
+          console.log(...new Set(arr2));
+
+// -----------------------------------------------------------------------
+
+          // 添加属性
+          const ofArr=[function(){},function(){},function(){},function(){},function(){},function(){}];
+          for(let i=0;i<ofArr.length;i++){
+              ofArr[i].index="of"+i;
+              console.log(ofArr[i])
+          }
+
+          for(let i of ofArr){
+            console.log(i);
+            console.log(i.index)
+          }
+// -----------------------------------------------------------------------
+          let m=new Map();
+          m.set("a",1).set("b",2).set("c",3);
+
+          for(let i of m){
+            console.log(i);
+          }
+          //
+          for(let [key,val] of m){
+            console.log(key,val);
+          }
+
+// -----------------------------------------------------------------------
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
